@@ -1,0 +1,30 @@
+seed: 42
+batch_size: 8
+epochs: 200
+lr: 5.0e-05
+weight_decay: 1.0e-05
+lr_scheduler:
+  type: cosine
+  warmup_steps: 500
+  min_lr: 1.0e-06
+dataset: davis
+latent_dim: 384
+n_heads: 6
+dropout: 0.25
+protein_feat_dim: 640
+use_hg: true
+hg_dim: 6
+hg_weight: 0.5
+lambda_align: 0.05
+beta_kl: 0.01
+standardize: true
+target_base: neg_log10
+aupr_pkd_cutoff: 7.0
+early_stopping:
+  monitor: test_mse
+  patience: 8
+  mode: min
+checkpoint:
+  save_best_only: true
+  keep_last_n: 5
+model: pafdta
