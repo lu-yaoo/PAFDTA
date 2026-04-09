@@ -37,7 +37,7 @@ data/
 ```
 
 ## Protein Token Features
-Extract protein_features.rar to the current directory
+Extract protein_features.rar to the current directory.
 Training uses precomputed per-token protein features stored as `.pt` files.
 Each protein sequence is mapped to a file by:
 - `md5(sequence)` -> `<md5>.pt`
